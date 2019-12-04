@@ -12,6 +12,8 @@ const MainContainer = (props) => {
             .catch(err => console.log(err))
     }, [])
 
+    console.log(`mock data: `, build)
+
     const [activeBuild, setActiveBuild] = useState(build.length - 1);
 
     const clickHandler = e => {
@@ -52,6 +54,7 @@ const MainContainer = (props) => {
                 build={build}
                 activeBuild={activeBuild}
                 clickHandler={clickHandler}
+                selectBuild={selectBuild}
                 handleInc={handleInc}
                 handleDec={handleDec}
             />
