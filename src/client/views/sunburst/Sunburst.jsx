@@ -47,10 +47,10 @@ export default class Sunburst extends Component {
         //     "end": "#bbbbbb"
         // };
 
-        const color = function () {
+        const color = () => {
             let ctr = 0;
             const hex = ['#53c79f', '#64b0cc', '#7a6fca', '#ca6f96', '#e58c72', '#e5c072']
-            return function () {
+            return () => {
                 if (ctr === hex.length - 1) {
                     ctr = 0;
                     return hex[ctr]
@@ -61,7 +61,7 @@ export default class Sunburst extends Component {
             }
         }
 
-        const loopColors = color()
+        const loopColors = color();
 
         // Total size of all segments; we set this later, after loading the data.
         let totalSize = 0;

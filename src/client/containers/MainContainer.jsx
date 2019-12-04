@@ -12,7 +12,7 @@ const MainContainer = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-    const [activeBuild, setActiveBuild] = useState(0);
+    const [activeBuild, setActiveBuild] = useState(build.length - 1);
 
     const clickHandler = e => {
         const length = build.length;
