@@ -4,15 +4,11 @@ module.exports = {
         "es6": true,
         "jest": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": "airbnb-base",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "lint": "eslint --ext .js --ext .jsx .", // tells eslint to look at .jsx files in addition to .js files
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -25,6 +21,6 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "quotes": ["error", "single"]
     }
 };
