@@ -2,17 +2,18 @@ module.exports = {
     "env": {
         "browser": true,
         "es6": true,
-        "jest": true
+        "node": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb/hooks",
+        "airbnb"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "lint": "eslint --ext .js --ext .jsx .", // tells eslint to look at .jsx files in addition to .js files
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -24,7 +25,11 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "no-param-reassign": ["off"],
+        "import/no-extraneous-dependencies": ["off"],
+        "react/jsx-filename-extension": ["off"],
+        "no-console": ["off"],
+        "no-unused-vars": ["warn"],
+        "import/no-unresolved": ["warn"]
     }
 };

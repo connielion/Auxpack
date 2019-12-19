@@ -1,1 +1,5 @@
-./service-worker.js
+node_modules
+src/_tests_
+src/index.js
+service-worker.js
+
